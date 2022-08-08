@@ -4904,3 +4904,77 @@ Processing by HomeController#index as TURBO_STREAM
 Completed 200 OK in 6ms (Views: 5.9ms | ActiveRecord: 0.0ms | Allocations: 2859)
 
 
+Started GET "/" for ::1 at 2022-08-08 15:58:33 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered application/_flash.html.erb (Duration: 3.4ms | Allocations: 774)
+  Rendered home/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1474)
+  Rendered application/_head.html.erb (Duration: 1.1ms | Allocations: 824)
+  Rendered application/_header.html.erb (Duration: 47.8ms | Allocations: 23171)
+  Rendered application/_footer.html.erb (Duration: 0.3ms | Allocations: 103)
+  Rendered layout layouts/application.html.erb (Duration: 56.2ms | Allocations: 26492)
+Completed 200 OK in 63ms (Views: 58.3ms | ActiveRecord: 0.0ms | Allocations: 29837)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-08-08 15:58:34 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/devise.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/devise
+  Rendered devise/shared/_links.html.erb (Duration: 1.3ms | Allocations: 743)
+  Rendered devise/sessions/new.html.erb within layouts/devise (Duration: 13.7ms | Allocations: 6363)
+  Rendered application/_flash.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendering layouts/application.html.erb
+  Rendered application/_head.html.erb (Duration: 0.6ms | Allocations: 398)
+  Rendered application/_header.html.erb (Duration: 1.7ms | Allocations: 1026)
+  Rendered application/_footer.html.erb (Duration: 0.0ms | Allocations: 16)
+  Rendered layouts/application.html.erb (Duration: 4.3ms | Allocations: 2120)
+  Rendered layout layouts/devise.html.erb (Duration: 19.6ms | Allocations: 9155)
+Completed 200 OK in 42ms (Views: 21.1ms | ActiveRecord: 8.4ms | Allocations: 18500)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-08-08 15:58:46 -0400
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"user1@milano.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "user1@milano.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 303ms (ActiveRecord: 1.4ms | Allocations: 6071)
+
+
+Started GET "/" for ::1 at 2022-08-08 15:58:46 -0400
+Processing by HomeController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered application/_flash.html.erb (Duration: 0.4ms | Allocations: 367)
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 512)
+  Rendered application/_head.html.erb (Duration: 0.5ms | Allocations: 429)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_header.html.erb:30
+  Rendered application/_header.html.erb (Duration: 3.2ms | Allocations: 2344)
+  Rendered application/_footer.html.erb (Duration: 0.0ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 3623)
+Completed 200 OK in 17ms (Views: 4.5ms | ActiveRecord: 0.4ms | Allocations: 3973)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2022-08-08 15:58:48 -0400
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 14ms (ActiveRecord: 1.3ms | Allocations: 2848)
+
+
+Started GET "/" for ::1 at 2022-08-08 15:58:48 -0400
+Processing by HomeController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered application/_flash.html.erb (Duration: 0.5ms | Allocations: 343)
+  Rendered home/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 445)
+  Rendered application/_head.html.erb (Duration: 0.6ms | Allocations: 424)
+  Rendered application/_header.html.erb (Duration: 2.0ms | Allocations: 1171)
+  Rendered application/_footer.html.erb (Duration: 0.0ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 2377)
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.0ms | Allocations: 2675)
+
+
