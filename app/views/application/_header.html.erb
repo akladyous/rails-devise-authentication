@@ -1,6 +1,5 @@
-<nav class="navbar navbar-expand-lg navbar-light">
+<nav class="navbar navbar-expand-lg bg-light">
     <%= link_to root_path, {'class': 'navbar-brand p-0'} do %>
-        <!-- <h5 className="m-0 p-0">devise</h5> -->
         <%= image_tag("rails.jpeg", { 'width': 35, 'height': 35, 'alt': 'ruby on rails'}) %>
     <% end %>
 
@@ -26,17 +25,18 @@
             <%= link_to "contact", root_path, {class: "nav-link", 'aria-current': "line" } %>
         </div>
 
-        <div class="user-menu">
-            <% if current_user %>
-                <%= link_to current_user.email, edit_user_password_path, class: 'current-user' %>
+        <div class="navbar-nav gap-3">
+            <% if user_signed_in? %>
+                <%= link_to current_user.email, edit_user_registration_path, class: 'current-user' %>
                 <%= button_to "Logout", destroy_user_session_path, class: "dropdown-item #{user_signed_in? ? '' : 'disabled'}", method: :delete %>
             <% else %>
+                <%= link_to 'Signup', new_user_registration_path, { class: "nav-link"  } %>
                 <%= link_to "Login", new_user_session_path, { class: "btn btn-light d-none d-lg-block" } %>
             <% end %>
         </div>
 
         <%# link_to 'edit password', edit_user_password_path %>
         <%# link_to 'reset password', reset_user_password_path %>
-
+        <button class="btn btn-"></button>
     </div>
 </nav>
