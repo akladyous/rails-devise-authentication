@@ -1,4 +1,7 @@
 /********** Template CSS **********/
+  /* .form-control::-webkit-input-placeholder {
+    font-style: italic !important;
+    font-size: .7em !important; */
 /*
 :root {
     --primary: #4ac4f3;
