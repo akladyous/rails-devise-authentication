@@ -3,5 +3,5 @@
 //= link_tree ../stylesheets
 //= require_tree .
 
-//= link home/index.css
+//= link index.css
 
