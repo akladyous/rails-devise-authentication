@@ -1,9 +1,9 @@
 module ApplicationHelper
-    def feedback_for?(object)
-        return nil if resource.errors.empty?
-        if resource.errors.has_key?(object)
+    def feedback_for?(object, attribute)
+        return nil if object.errors.empty?
+        if object.errors.has_key?(attribute)
             return content_tag :div, nil, { class: ['d-block', 'invalid-feedback'] } do
-                resource.errors.full_messages_for(object).to_sentence
+                resource.errors.full_messages_for(attribute).to_sentence
             end
         end
         nil
