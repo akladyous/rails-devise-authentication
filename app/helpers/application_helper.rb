@@ -1,4 +1,5 @@
 module ApplicationHelper
+
     def feedback_for?(object, attribute)
         return nil if object.errors.empty?
         if object.errors.has_key?(attribute)
