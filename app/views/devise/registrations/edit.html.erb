@@ -55,6 +55,11 @@
                                     <%= feedback_for? resource, :current_password %>
                                 </div>
 
+                                <div class="form-control text-center border-0 mt-3">
+                                    <%= f.submit "Update", { class: "btn btn-light rounded-pill py-2 px-4"} %>
+                                </div>
+
+                                <% end %>
                                 <div class="form-group mb-2">
                                     <%= render "devise/shared/links" %>
                                     <%= button_to "Cancel my account",
@@ -65,11 +70,6 @@
                                     %>
                                     <%# link_to "Back", :back %>
                                 </div>
-                                <div class="form-control text-center border-0 mt-3">
-                                    <%= f.submit "Update", { class: "btn btn-light rounded-pill py-2 px-4"} %>
-                                </div>
-
-                            <% end %>
 
                     </div>
                 </div>
