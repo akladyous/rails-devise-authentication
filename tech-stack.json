@@ -1,0 +1,10 @@
+{
+    "tech stack": [
+        "Ruby on Rails 7.0.3",
+        "PostgreSQL",
+        "Puma (web server)",
+        "Devise (authentication)",
+        "Turbo Rails (Hotwire)",
+        "Stimulus Rails (Hotwire)"
+    ]
+}
