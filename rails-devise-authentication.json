@@ -1,0 +1,16 @@
+{
+    "tech stack": [
+        "Ruby on Rails 7.0.3",
+        "PostgreSQL",
+        "Puma (web server)",
+        "Devise (authentication)",
+        "Turbo Rails (Hotwire)",
+        "Stimulus Rails (Hotwire)"
+    ],
+    "highlights": [
+        "Built a production-ready authentication template using Ruby on Rails and Devise, providing secure user registration, login, logout, and session management out of the box.",
+        "Implemented password recovery and persistent sessions with time-limited reset tokens, remember-me functionality, and encrypted cookie-based sessions.",
+        "Secured authentication flows with BCrypt password hashing, CSRF protection, strong parameter sanitization, and configurable account lockout and confirmation features.",
+        "Integrated a modern, responsive UI using Bootstrap 5 and Hotwire (Turbo + Stimulus), enabling fast page transitions and customizable Devise views."
+    ]
+}
